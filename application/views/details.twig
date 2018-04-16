@@ -1,0 +1,32 @@
+<form action="/changenote/{{ note.id }}" method="post" class="noteForm">
+    <dl>
+        <div class="left">
+            <dt><label for="name">Task's name</label></dt>
+            <dd><input type="text" id="name" name="name" value="{{ note.name }}"></dd>
+            <dt><label for="description">Description</label></dt>
+            <dd><textarea name="description" id="description">{{ note.description }}</textarea></dd>
+        </div>
+        <div class="right">
+            <dt><label for="image">Image's name</label></dt>
+            {% if image is defined %}
+            <dd><input type="text" id="image" name="image_name" value="{{ image.name }}"></dd>
+            <dt><label for="url">Url</label></dt>
+            <dd><input type="text" id="url" name="url" value="{{ image.url }}"></dd>
+            <dt>
+                <label for="add">Add image</label>
+                <input type="checkbox" name="add_image" id="add" checked>
+            </dt>
+                <input type="hidden" name="image_id" value="{{ image.images_id }}">
+            {% else %}
+                <dd><input type="text" id="image" name="image_name"></dd>
+                <dt><label for="url">Url</label></dt>
+                <dd><input type="text" id="url" name="url"></dd>
+                <dt>
+                    <label for="add">Add image</label>
+                    <input type="checkbox" name="add_image" id="add">
+                </dt>
+            {% endif %}
+            <dd><input type="submit" value="update"></dd>
+        </div>
+    </dl>
+</form>

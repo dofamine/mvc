@@ -1,0 +1,55 @@
+.cont {
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+    position: relative;
+}
+h1 {
+    margin:20px 0;
+    text-align: center;
+    text-shadow: 1px 1px 3px black;
+    color: white;
+    font-size: 60px;
+    position: relative;
+    width: 200%;
+    left: -50%;
+}
+.cont form dl{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.cont form dl dt {
+    margin: 10px 0;
+    font-size: 25px;
+    color: white;
+}
+.cont form dl dt input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+.cont form dl dt input[type="submit"]{
+    padding: 20px 60px;
+    font-size: 25px;
+    text-shadow: 1px 1px 2px black;
+}
+.cont form dl dd input {
+    font-size: 25px;
+}
+.cont form dl dd input {
+    height: 50px;
+    width: 350px;
+}
+.cont a {
+    display: block;
+    margin-top: 20px;
+    font-size: 30px;
+    color: black;
+    text-align: right;
+}
+
+
+

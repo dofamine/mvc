@@ -1,0 +1,20 @@
+.contReg {
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #561348;
+}
+.contReg form dl dt{
+    margin: 15px 0;
+}
+.contReg form dl dt input[type="submit"]{
+    padding: 5px 10px;
+    font-size: 15px;
+    text-shadow: 1px 1px 2px black;
+    margin-top: 20px;
+}
+.contReg form dl dd input {
+    font-size: 20px;
+    padding: 5px;
+}

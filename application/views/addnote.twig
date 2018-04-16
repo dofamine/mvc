@@ -1,0 +1,21 @@
+<form action="/addNote" method="post" class="noteForm">
+    <dl>
+        <div class="left">
+            <dt><label for="name">Task's name</label></dt>
+            <dd><input type="text" id="name" name="name"></dd>
+            <dt><label for="description">Description</label></dt>
+            <dd><textarea name="description" id="description"></textarea></dd>
+        </div>
+        <div class="right">
+            <dt><label for="image">Image's name</label></dt>
+            <dd><input type="text" id="image" name="image_name"></dd>
+            <dt><label for="url">Url</label></dt>
+            <dd><input type="text" id="url" name="url"></dd>
+            <dt>
+                <label for="add">Add image</label>
+                <input type="checkbox" name="add_image" id="add">
+            </dt>
+            <dd><input type="submit" value="send"></dd>
+        </div>
+    </dl>
+</form>

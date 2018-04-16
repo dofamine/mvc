@@ -1,0 +1,14 @@
+{% for note in notes %}
+    <div class="note">
+        <img src="{% for image in images %}{% if image.notes_id == note.id %}{{ image.url }}" alt="{{ image.name }}{% endif %}{% endfor %}">
+        <div class="describe">
+            <h2>{{ note.name }}</h2>
+            <p>{{ note.description }}</p>
+            <div class="noteNav">
+                <a href="/change/{{ note.id }}">Change</a>
+                <a href="/delete/{{ note.id }}">Delete</a>
+                <a href="/done/{{ note.id }}">Make done</a>
+            </div>
+        </div>
+    </div>
+{% endfor %}

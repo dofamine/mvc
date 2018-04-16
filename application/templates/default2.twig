@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/media/css/default2.css">
+    <link rel="stylesheet" href="/media/css/{{ css }}.css">
+    <title>Document</title>
+</head>
+<body>
+<header>
+    {% if main is defined %}
+    <h1>Hello, {{ user | capitalize }}, it's your desc</h1>
+    {% else %}
+    <h1>{{ description }}</h1>
+    {% endif %}
+    <nav>
+        <ul>
+            <li><a href="/todo">Main</a></li>
+            <li><a href="/logout">Logout</a></li>
+            <li><a href="/logoutAll">Logout from all devices</a></li>
+        </ul>
+    </nav>
+</header>
+{% if doneNotes is defined %}
+<nav class="history">
+    <ul>
+        <li class="head"><h3>history</h3></li>
+        {% for note in doneNotes %}
+            <li><a href="shownote/{{ note.id }}">{{ note.name }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
+{% endif %}
+{% if doneNotesFromDesc is defined %}
+    <nav class="history">
+        <ul>
+            <li class="head"><h3>history</h3></li>
+            {% for note in doneNotesFromDesc %}
+                <li><a href="{{ note.id }}">{{ note.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+{% endif %}
+<div class="container">
+    {{ view | raw }}
+</div>
+</body>
+</html>

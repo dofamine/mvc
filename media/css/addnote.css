@@ -1,0 +1,42 @@
+
+.noteForm dl{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 25px;
+    padding-top: 20px;
+}
+.noteForm .left {
+    margin-right: 30px;
+}
+.noteForm .left dd input{
+    width: 400px;
+    font-size: 20px;
+    padding: 5px;
+}
+.noteForm .left dt,
+.noteForm .right dt
+{
+    padding:10px 0;
+}
+.noteForm .left textarea {
+    width: 400px;
+    height: 300px;
+    resize: none;
+    font-size: 20px;
+    padding: 5px;
+}
+.noteForm .right dd input{
+    font-size: 20px;
+    padding: 5px;
+}
+.noteForm .right dt input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+.noteForm .right dd input[type="submit"]{
+    display: block;
+    margin:50px auto;
+    padding: 10px 25px;
+}

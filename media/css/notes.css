@@ -1,0 +1,57 @@
+.add {
+    display: block;
+    position: absolute;
+    top:140px;
+    left: 180px;
+    background: #ccc;
+    color: black;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight:bold;
+    z-index: 2;
+}
+.note {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 2px black;
+    position: relative;
+}
+.note img {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: 50px;
+    right: 25px;
+}
+.note .describe {
+    min-height: 150px;
+    width: 80%;
+}
+.note .describe h2 {
+    text-align: center;
+    font-size: 25px;
+}
+.note .describe p {
+    text-align: justify;
+    text-indent: 20px;
+    margin-top: 10px;
+}
+.note .describe .noteNav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+.note .describe .noteNav a{
+    color: #da000e;
+    margin-left: 20px;
+    font-weight: bold;
+}
+

@@ -1,0 +1,29 @@
+<div class="cont">
+    <h1>Todo page for your tasks</h1>
+    <form action="/login" method="post">
+        <dl>
+            <dt><label for="login">Login</label></dt>
+            <dd><input type="text" name="login" id="login"></dd>
+            <dt><label for="pass">Password</label></dt>
+            <dd><input type="password" name="pass" id="pass"></dd>
+            <dt>
+                <label for="remember">Remember me</label>
+                <input type="checkbox" id="remember" name="remember">
+            </dt>
+            <dt><input type="submit" value="login"></dt>
+        </dl>
+    </form>
+    <a href="/register">register here</a>
+</div>
+
+
+{#{{ images|raw }}<br>#}
+{#{% if (is_auth) %}#}
+    {#hello, {{ user.login | capitalize }}<br>#}
+    {#{{ user.role }}#}
+    {#<a href="/logout">logout</a><br>#}
+    {#<a href="/logoutall">logout all</a>#}
+{#{% else %}#}
+    {#<a href="/register">register</a><br>#}
+    {#<a href="/login">login</a>#}
+{#{% endif %}#}
